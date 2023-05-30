@@ -1,0 +1,32 @@
+<section class="boxed-sm" id="cursos">
+    <div class="container">
+        <div class="row">
+            <div class="padding text-center">
+                <h1>Clases de Joyería</h1>
+                <p>No dejes de ver en el menú <b>CURSOS</b> todos nuestros cursos con información y precios.</p>
+            </div>
+            <div class="row ">
+                <!-- Servicios -->
+                <div class="col-12 col-sm-4 col-md-4" *ngFor="let curso of cursos">
+                    <div class="card servicio">
+                        <div class="card-body">
+                            <div class="imagen">
+                                <div *ngIf="!curso.image">
+                                    <img class="img-responsive" src="./assets/images/no-image.jpg" alt="ursi galletti taller escuela orfebreria {{curso.title}}" style="width:100%" />
+                                </div>
+                                <div *ngIf="curso.image">
+                                    <img class="img-responsive" [src]="curso.image | imagenPipe: 'cursos'" alt="ursi galletti taller escuela orfebreria {{curso.title}}" style="width:100%" />
+                                </div>
+
+                            </div>
+                            <h2>{{curso.name}}</h2>
+                            <div class="sapo introHome" [innerHtml]="curso.adicional | safe: 'html' "></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicios -->
+
+            </div>
+        </div>
+    </div>
+</section>

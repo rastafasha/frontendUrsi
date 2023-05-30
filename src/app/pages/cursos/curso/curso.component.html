@@ -1,0 +1,45 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" [src]="curso.image | imagenPipe: 'cursos'" alt="ursi galletti taller escuela orfebreria {{curso.name}}">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">{{curso.name}}</h3>
+</section>
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding">
+            <div class="col-md-6">
+                <div class="woocommerce-product-gallery">
+                    <div *ngIf="!curso.image">
+                        <img class="img-responsive" src="./assets/images/no-image.jpg" width="100%" alt="ursi galletti taller escuela orfebreria {{curso.name}}" />
+                    </div>
+                    <div *ngIf="curso.image">
+                        <img class="img-responsive" [src]="curso.image | imagenPipe: 'cursos'" width="100%" alt="ursi galletti taller escuela orfebreria {{curso.name}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="summary">
+                    <div class="desc">
+                        <div class="header-desc">
+                            <h3 class="product-title">{{curso.name}}</h3>
+                            <p class="price">${{curso.price}}</p>
+                        </div>
+                        <div class="body-desc">
+                            <div *ngIf="curso.urlVideo">
+                                <iframe class="embed-responsive-item shadow" width="100%" height="240" [src]="getVideoIframe(curso.urlVideo)" frameborder="0" allow="accelerometer; autoplay;  " allowfullscreen></iframe>
+                            </div>
+                            <div class="woocommerce-product-details-short-description">
+                                <div class="sapo" [innerHtml]="curso.adicional | safe: 'html' "></div>
+                            </div>
+                            <div class="sharing">
+                                <h4>Compartir</h4>
+                                <share-buttons theme="circles-dark" [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']" [showIcon]="true" [showText]="false"
+                                    url="https://ursigalletti.net/curso/{{curso.slug}}" description="{{curso.description}}" twitterAccount="@ursigalletti" class="pt-1">
+                                </share-buttons>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

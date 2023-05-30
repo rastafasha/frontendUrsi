@@ -1,13 +1,231 @@
 <!doctype html>
-<html lang="en">
+<html lang="es_US">
+
 <head>
-  <meta charset="utf-8">
-  <title>FrontendUrsi</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>Ursi Galletti Orfebre Taller Escuela</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- pwa -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#961f36">
+    <!-- iPhone X (1125px x 2436px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="assets/icons-ios/apple-launch-1125x2436.png">
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="assets/icons-ios/apple-launch-750x1334.png">
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="assets/icons-ios/apple-launch-1242x2208.png">
+    <!-- iPhone 5 (640px x 1136px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="assets/icons-ios/apple-launch-640x1136.png">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="#961f36">
+
+    <meta name="apple-mobile-web-app-title" content="Ursi Galletti">
+    <link rel="apple-touch-icon" href="assets/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/icons/icon-512x512.png">
+    <!-- pwa -->
+    <!-- stilos -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/revolution/css/settings.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/revolution/css/layers.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/revolution/css/navigation.css" />
+    <!-- stilos -->
+
+    <!-- seo -->
+    <meta name="description" content="Taller escuela de orfebrería, dictada por Ursi Galleti: Cursos y elaboración de piezas de ofebreria por Ursi Galletti en Houston Texas. ">
+    <meta name="keywords" content="venezolanos en texas, venezolanos en houston, venezolanos en estados unidos, cursos, ursi galletti, ursi, orfebre, talleres, orfebreria, cursos de orfebreria, curso de orfebreria, baño de electrolitos, fundicion, asistente de joyero, joyero calificado, asistente de joyero calificado, cadena cubana, cadena barbada, oro, plata, cobre, niquel, rodio, joyas en 3d, reparacion de joyeria, orfebreria en texas, escuela, escuela de orfebreria, Bellaire, Houston, United States, orfebreria en panama, orfebreria en atlanta, cursos de orfebreria en miami, cursos de orfebreria en houston, cursos de orfebreria en panama, cursos de orfebreria en atlanta, piezas de orfebreria">
+    <meta property="og:image" content="https://ursigalletti.net/ursi.jpg" />
+    <meta name="revisit-after" content="7 days">
+    <meta name="copyright" content="ursigalletti.net/">
+    <meta name="author" content="SEO by @malcolm_cordova">
+    <meta name="language" content="español, spanish">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!--=====================================
+   Marcado de Open Graph FACEBOOK
+   ======================================-->
+
+    <meta property="og:title" content="Ursi Galletti Orfebre Taller Escuela.">
+    <meta property="og:url" content="ursigalletti.net">
+    <meta property="og:description" content="Taller escuela de orfebrería, dictada por Ursi Galleti: Cursos y elaboración de piezas de ofebreria por Ursi Galletti en Houston Texas.">
+    <meta property="og:image" content="https://ursigalletti.net/ursi.jpg">
+    <meta property="og:type" content="web">
+    <meta property="og:site_name" content="https://ursigalletti.net/logo-solo.png">
+    <meta property="og:locale" content="es_US">
+    <!--=====================================
+   Marcado de Open Graph FACEBOOK
+   ======================================-->
+
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.ancla').click(function() {
+                var link = $(this);
+                var anchor = link.attr('href');
+                $('html, body').stop().animate({
+                    scrollTop: jQuery(anchor).offset().top
+                }, 2000);
+                return false;
+            });
+        });
+    </script>
+
+
 </head>
+
 <body>
-  <app-root></app-root>
+    <div class="home-1" id="page">
+        <app-root></app-root>
+    </div>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
+
+
 </body>
+
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-48769475-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://ursigalletti.net/",
+        "name": "Ursi Galletti Taller Escuela Orfebrería",
+        "image": "https://ursigalletti.net/ursi.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Houston",
+            "addressRegion": "TX",
+            "postalCode": "77036",
+            "streetAddress": "7500 Bellaire Blvd"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-832-897.60.91",
+            "contactType": "Customer service"
+        }
+    }
+</script>
+
+
+<script src="./assets/js/library/jquery.min.js"></script>
+<script src="./assets/js/library/bootstrap.min.js"></script>
+<script src="./assets/js/library/jquery.mmenu.all.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./assets/revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="./assets/revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="./assets/revolution/css/navigation.css" />
+<script src="./assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="./assets/js/global.js"></script>
+<script src="./assets/js/login-registro.js"></script>
+<script src="./assets/js/config-mm-menu.js"></script>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/jquery.easing.min.js"></script>
+
+<script src="./assets/js/config-carousel-thumbnail.js"></script>
+<script src="./assets/js/config-carousel-product-quickview.js"></script>
+
+<!-- Demo Only-->
+<script src="./assets/js/demo-add-to-cart.js"></script>
+
+<link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="./assets/js/bootstrap-image-gallery.js"></script>
+<script src="./assets/js/galeria.js"></script>
+<script>
+    $('.gallery').bootstrapGallery();
+
+    $('.gallery-overview').bootstrapGallery({
+        iconset: "fontawesome"
+    });
+    BootstrapGallery.defaults = {
+        modalAttrs: {
+            "id": "gallery-modal",
+            "class": "modal fade",
+            "tabindex": "-1",
+            "role": "dialog",
+            "aria-hidden": "true"
+        },
+        containerAttrs: {
+            "class": "img-container"
+        },
+        wrapperAttrs: {
+            "class": "img-wrapper"
+        },
+        imgAttrs: {
+            "class": "img-responsive",
+            "src": "#"
+        },
+        closeBtnAttrs: {
+            "class": "btn-close glyphicon glyphicon-remove",
+            "aria-hidden": "true"
+        },
+        btnPrevAttrs: {
+            "class": "btn-prev glyphicon glyphicon-chevron-left"
+        },
+        btnNextAttrs: {
+            "class": "btn-next glyphicon glyphicon-chevron-right"
+        },
+        indicatorAttrs: {
+            "class": "indicator glyphicon glyphicon-refresh"
+        },
+        indicatorThreshold: 100,
+        swipeThreshold: 30
+    };
+</script>
+
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>

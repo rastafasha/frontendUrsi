@@ -1,0 +1,8 @@
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info a {
+    color: var(--vinotinto);
+}

@@ -1,0 +1,17 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/escuela2.jpg" alt="ursi galletti taller escuela orfebreria">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Escuela Y Ursi Galletti</h3>
+</section>
+
+
+<section class="boxed-sm" id="info">
+    <div class="container ">
+        <div class="masonry">
+            <div class=" item" *ngFor="let escuela of escuelas">
+                <a [href]="escuela.image | imagenPipe: 'galleryschools'" data-gallery title="">
+                    <img [src]="escuela.image | imagenPipe: 'galleryschools'" alt="ursi galletti taller escuela orfebreria" width="92" height="100" border="0" class="pin" /></a>
+            </div>
+        </div>
+    </div>
+</section>

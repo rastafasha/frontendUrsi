@@ -1,0 +1,61 @@
+<!-- <div class="banner banner-image-fit-screen">
+    <div class="rev_slider slider-home-1" id="slider_1">
+        <ul *ngFor="let banner of banners">
+
+            <li>
+                <div class="col-xs-12 col-sm-6 inf">
+                    <h1>{{banner.title}}</h1>
+                    <h4>{{banner.subtitle}}</h4>
+                    <div [innerHtml]="banner.description | safe: 'html' "></div>
+                    <a href="{{banner.url}}" target="{{banner.target}}"><button class="btn btn-default">{{banner.botonName}}</button></a>
+                </div>
+                <img [src]="banner.image | imagenPipe: 'banners'" alt="ursi galletti taller escuela orfebreria {{banner.title}}">
+                <img [src]="banner.image | imagenPipe: 'banners'" alt="ursi galletti taller escuela orfebreria {{banner.title}}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10">
+            </li>
+        </ul>
+    </div>
+</div> -->
+<div id="mycarr" class="carousel slide slide1 carousel-fade ">
+    <!-- Indicators -->
+    <!--ol class="carousel-indicators">
+  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#myCarousel" data-slide-to="1"></li>
+  <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol-->
+
+    <!-- Wrapper for Slides -->
+    <div class="carousel-inner" *ngFor="let banner of banners">
+
+        <div class="item active">
+            <div class="desktop">
+                <div class="BannPpal">
+                    <div class="container">
+                        <div class="inf">
+                            <h2 class="Up {{banner.is_activeText}}">{{banner.title}}</h2>
+                            <h4 class="Up {{banner.is_activeText}}">{{banner.subtitle}}</h4>
+                            <div [innerHtml]="banner.description | safe: 'html' "></div>
+                            <div class="text-center">
+                                <a href="{{banner.url}}" target="{{banner.target}}" class="btn btn-outline-ursi {{banner.gotBoton}}">{{banner.botonName}}  </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <img [src]="banner.image | imagenPipe: 'banners'" alt="ursi galletti taller escuela orfebreria {{banner.title}}">
+                </div>
+            </div>
+        </div>
+
+        <!-- <a href="#sli" class="ancla">
+            <div class="mouseicon "></div>
+        </a> -->
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#mycarr" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#mycarr" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+
+</div>

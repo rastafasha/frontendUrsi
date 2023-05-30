@@ -1,0 +1,29 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/arete2.png" alt="ursi galletti taller escuela orfebreria aretes">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Aretes</h3>
+</section>
+
+
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding" *ngFor="let arete of aretes">
+            <!-- arete -->
+            <div class="curso-cronograma animated fadeInUp">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Modelo: {{arete.model}}</h3>
+                    <h3>{{arete.title}}</h3>
+                    <div class="sapo" [innerHtml]="arete.description | safe: 'html' "></div>
+                    <div *ngIf="arete.costo">
+                        <p class="price">{{arete.costo|currency}}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img [src]="arete.image | imagenPipe: 'aretes'" alt="ursi galletti taller escuela orfebreria {{arete.title}}">
+                </div>
+            </div>
+            <!-- arete -->
+
+        </div>
+    </div>
+</section>

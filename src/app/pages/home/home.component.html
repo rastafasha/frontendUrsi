@@ -1,0 +1,29 @@
+<app-banner></app-banner>
+<!-- Clases de Joyería -->
+<app-destacados></app-destacados>
+<div class="padding text-center" id="sli">
+    <a (click)="gotoCursos()">
+        <button class="btn btn-outline-ursi"> Ver Todos los cursos</button>
+    </a>
+</div>
+
+
+<!-- blog -->
+<section class="boxed-sm blog">
+    <div class="container">
+        <div class="row">
+            <div class="padding text-center">
+                <h1>Blog</h1>
+            </div>
+            <div class="row ">
+                <div class="grid-sizer"></div>
+                <div class="col-xs-12 col-sm-8 col-md-8">
+                    <app-blog-featured></app-blog-featured>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <!-- <app-lateral></app-lateral> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

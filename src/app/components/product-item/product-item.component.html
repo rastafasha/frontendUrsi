@@ -1,0 +1,34 @@
+<figure class="item animated fade-in">
+    <div class="product product-style-1">
+        <div class="img-wrapper">
+            <a class="js-quick-view cursor" type="button" data-toggle="modal" [attr.data-target]="'#' + product.modal">
+                <div class="image-container">
+                    <div *ngIf="!product.image">
+                        <img class="img-responsive" src="./assets/images/no-image.jpg" width="100%" alt="ursi galletti taller escuela orfebreria {{product.name}}" />
+                    </div>
+                    <div *ngIf="product.image">
+                        <img class="img-responsive" [src]="product.image | imagenPipe: 'cursos'" width="100%" alt="ursi galletti taller escuela orfebreria {{product.name}}" />
+                    </div>
+                </div>
+            </a>
+            <div class="product-control-wrapper bottom-right">
+                <div class="wrapper-control-item">
+                    <a class="js-quick-view cursor" type="button" data-toggle="modal" [attr.data-target]="'#' + product.modal">
+                        <span class="lnr lnr-eye"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <figcaption class="desc">
+            <h3>{{product.name | slice:0:30 }}...</h3>
+            <span class="price">${{product.price}}</span><br>
+            <!-- <div *ngIf="!user">
+
+            </div> -->
+            <div *ngIf="user">
+                <!-- <button class="btn btn-outline-success" [routerLink]="['/curso', product.slug]"> <i class="fa fa-eye"></i></button> -->
+                <button class="btn btn-outline-ursi" (click)="addToCart()"> <i class="fa fa-shopping-cart"></i></button>
+            </div>
+        </figcaption>
+    </div>
+</figure>

@@ -1,0 +1,27 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/pulsera3.png" alt="ursi galletti taller escuela orfebreria pulsera">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Pulseras</h3>
+</section>
+
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding" *ngFor="let pulsera of pulseras">
+            <!-- pulsera -->
+            <div class="curso-cronograma animated fadeInUp">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Modelo: {{pulsera.model}}</h3>
+                    <h3>{{pulsera.title}}</h3>
+                    <div class="sapo" [innerHtml]="pulsera.description | safe: 'html' "></div>
+                    <div *ngIf="pulsera.costo">
+                        <p class="price">{{pulsera.costo|currency}}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img [src]="pulsera.image | imagenPipe: 'pulseras'" alt="ursi galletti taller escuela orfebreria {{pulsera.title}}">
+                </div>
+            </div>
+            <!-- pulsera -->
+        </div>
+    </div>
+</section>

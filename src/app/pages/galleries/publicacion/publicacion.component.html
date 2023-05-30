@@ -1,0 +1,19 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/articulosprensa04.jpg" alt="ursi galletti taller escuela orfebreria publicacion">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Publicaciones</h3>
+</section>
+
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="masonry">
+            <div class="item" *ngFor="let publicacion of publicaciones">
+                <a class="thumbnail" data-gallery [href]="publicacion.image | imagenPipe: 'publicacions'">
+                    <img class="pin" [src]="publicacion.image | imagenPipe: 'publicacions'" alt="ursi galletti taller escuela orfebreria publicaciones" /></a>
+            </div>
+            <!--end thumb -->
+        </div>
+    </div>
+
+
+</section>

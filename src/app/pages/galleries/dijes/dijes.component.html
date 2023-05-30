@@ -1,0 +1,28 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/dije1.png" alt="ursi galletti taller escuela orfebreria dijes">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Dijes</h3>
+</section>
+
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding" *ngFor="let dije of dijes">
+            <!-- dije -->
+            <div class="curso-cronograma animated fadeInUp">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Modelo: {{dije.model}}</h3>
+                    <h3>{{dije.title}}</h3>
+                    <div class="sapo" [innerHtml]="dije.description | safe: 'html' "></div>
+                    <div *ngIf="dije.costo">
+                        <p class="price">{{dije.costo|currency}}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img [src]="dije.image | imagenPipe: 'dijes'" alt="ursi galletti taller escuela orfebreria {{dije.title}}">
+                </div>
+            </div>
+            <!-- dije -->
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+@import 'prettyPhoto.css';
+.centered {
+    margin: auto auto;
+    display: block;
+    width: 185px;
+}
+
+.thumbnail {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 1px solid #ccc;
+}
+
+.thumbnail img {
+    opacity: 1;
+}
+
+.gallery {
+    color: #fff;
+    float: left;
+}
+
+.span3 a img {
+    height: 220px;
+    width: auto;
+}
+
+.span3 a {
+    height: 230px;
+    width: auto;
+}
+
+.prod_boxH {
+    float: left;
+    margin: 5px;
+    height: auto;
+}
+
+.prod_boxH img {
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.gallery ul li {
+    display: inline-block;
+}

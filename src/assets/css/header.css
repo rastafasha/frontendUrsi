@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+.header2 {
+    height: 100px;
+    align-self: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--white);
+    /* backdrop-filter: blur(34px); */
+    box-shadow: 0 8px 32px 0 rgba(11, 11, 11, 0.37);
+}
+
+.header2 .logo {}
+
+.header2 ul.menu>li>a {
+    color: var(--vinotinto)
+}
+
+.header-1-inner .menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.78571;
+    color: #fff;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.header-1-inner .menu>li>a ul li a {
+    text-decoration: none;
+}
+
+@media(max-width:1024px) {}
+
+@media(max-width:768px) {}
+
+@media(max-width:420px) {
+    .header {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        margin-top: 0px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+    }
+    .header2 {
+        height: auto;
+        padding: 10px;
+        position: fixed;
+        z-index: 999;
+        /* background: rgba(248, 248, 249, 0.834); */
+        background: #fff;
+        box-shadow: 0 8px 32px 0 rgb(11 11 11 / 37%);
+    }
+    .header .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .header .search {
+        display: none !important;
+    }
+    .header .container-fluid {
+        padding: 0;
+    }
+    .write img,
+    .notification img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/* search */
+
+.header .search {
+    display: flex;
+    width: 170px;
+    height: 40px;
+    justify-content: space-between;
+    align-self: center;
+    background-color: var(--white);
+    border-radius: 40px;
+    flex-direction: row;
+    border: 1px solid var(--gris);
+    margin-left: 10px;
+}
+
+.header .search input {
+    border-radius: 40px;
+    padding: 5px 10px;
+}
+
+.header .search p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+
+.header .search i {
+    display: flex;
+}
+
+.header .search img {
+    display: flex;
+}
+
+#custom-search-form {
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+}
+
+#custom-search-form .search-query {
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    border: none;
+}
+
+#custom-search-form button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+}
+
+.search-query:focus+button {
+    z-index: 3;
+}

@@ -1,0 +1,48 @@
+<div *ngFor="let product of products; let i = index">
+    <div class="modal animate fadeInUp" id="{{product.modal}}" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-quickview woocommerce" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="woocommerce-product-gallery">
+                                <div *ngIf="!product.image">
+                                    <img class="img-responsive" src="./assets/images/no-image.jpg" width="100%" alt="ursi galletti taller escuela orfebreria {{product.name}}" />
+                                </div>
+                                <div *ngIf="product.image">
+                                    <img class="img-responsive" [src]="product.image | imagenPipe: 'cursos'" width="100%" alt="ursi galletti taller escuela orfebreria {{product.name}}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="summary">
+                                <div class="desc">
+                                    <div class="header-desc">
+                                        <h3 class="product-title">{{product.name}}</h3>
+                                        <p class="price">${{product.price}}</p>
+                                    </div>
+                                    <div class="body-desc">
+                                        <div *ngIf="product.urlVideo">
+                                            <iframe class="embed-responsive-item shadow" width="100%" height="240" [src]="getVideoIframe(product.urlVideo)" frameborder="0" allow="accelerometer; autoplay;  " allowfullscreen></iframe>
+                                        </div>
+                                        <div class="woocommerce-product-details-short-description">
+                                            <div class="sapo" [innerHtml]="product.adicional | safe: 'html' "></div>
+                                        </div>
+                                        <share-buttons theme="circles-dark" [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']" [showIcon]="true" [showText]="false"
+                                            url="https://ursigalletti.net/curso/{{product.slug}}" description="{{product.description}}" twitterAccount="@ursigalletti" class="pt-1">
+                                        </share-buttons>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+<!-- header movil -->
+<nav id="menu">
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a href="javascript:void(0)">Quienes Somos</a>
+            <ul>
+                <li><a routerLink="la-escuela-ursi-galletti">La Escuela</a></li>
+                <li><a routerLink="acerca-de-ursi-galletti">Ursi Galletti</a></li>
+                <li><a routerLink="aspecto-docente">Aspecto Docente</a></li>
+                <li><a routerLink="aspecto-laboral">Aspecto Laboral</a></li>
+                <li><a routerLink="coordinacion-cultural">Coordinación Cultural</a></li>
+                <li><a href="javascript:void(0)">Exposiciones</a>
+                    <ul>
+                        <li><a routerLink="exposiciones-colectivas">Exposiciones Colectivas</a></li>
+                        <li><a routerLink="exposiciones-individuales">Exposiciones Individuales</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0)">Cursos</a>
+            <ul>
+                <li><a routerLink="cronograma-de-cursos">Cronograma de Cursos</a></li>
+                <li><a routerLink="cursos-de-orfebreria">Todos los Cursos</a></li>
+                <li><a routerLink="curso-online-de-orfebria-en-vivo">Curso Online en Vivo</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0)">Galería</a>
+            <ul>
+                <li><a routerLink="anillos">Anillos</a></li>
+                <li><a routerLink="aretes">Aretes</a></li>
+                <li><a routerLink="dijes">Dijes</a></li>
+                <li><a routerLink="pulseras">Pulseras</a></li>
+                <li><a routerLink="expo-caf">Expo CAF</a></li>
+                <li><a routerLink="escuela-y-ursi-galletti">Escuela y Ursi Galletti</a></li>
+                <li><a routerLink="joyas-de-la-gran-pantalla">Joyas de la Gran Pantalla</a></li>
+                <li><a routerLink="publicaciones">Publicaciones</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0)">Servicios</a>
+            <ul>
+                <li><a routerLink="servicios">Reparaciones</a></li>
+                <li><a routerLink="herramientas">Herramientas</a></li>
+            </ul>
+        </li>
+        <li><a routerLink="contact">Contacto</a></li>
+        <li><a href="javascript:void(0)">Mi Cuenta</a>
+            <ul>
+                <div *ngIf="!user">
+                    <li><a routerLink="login">Registro/Login</a></li>
+                </div>
+                <div *ngIf="user">
+                    <li>Bienvenido: {{user.username}}</li>
+                    <li><a [routerLink]="['/user-account', user.id]">Mi Cuenta</a></li>
+                    <li><a (click)="logout()" class="cursor">Logout</a></li>
+                </div>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!-- header movil -->
+<!-- header desktop -->
+<header class="header-style-1">
+    <div class="container">
+        <div class="row">
+            <div class="header-1-inner">
+                <a class="brand-logo animsition-link" routerLink="/">
+                    <img class="img-responsive" src="./assets/images/logo.png" alt="Logo Ursi galletti" />
+                </a>
+                <nav>
+                    <ul class="menu ">
+                        <li><a href="javascript:void(0)">Quienes Somos</a>
+                            <ul>
+                                <li><a routerLink="la-escuela-ursi-galletti">La Escuela</a></li>
+                                <li><a routerLink="acerca-de-ursi-galletti">Ursi Galletti</a></li>
+                                <li><a routerLink="aspecto-docente">Aspecto Docente</a></li>
+                                <li><a routerLink="aspecto-laboral">Aspecto Laboral</a></li>
+                                <li><a routerLink="coordinacion-cultural">Coordinación Cultural</a></li>
+                                <li><a href="javascript:void(0)">Exposiciones</a>
+                                    <ul>
+                                        <li><a routerLink="exposiciones-colectivas">Exposiciones Colectivas</a></li>
+                                        <li><a routerLink="exposiciones-individuales">Exposiciones Individuales</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Cursos</a>
+                            <ul>
+                                <li><a routerLink="cronograma-de-cursos">Cronograma de Cursos</a></li>
+                                <li><a routerLink="cursos-de-orfebreria">Todos los Cursos</a></li>
+                                <li><a routerLink="curso-online-de-orfebria-en-vivo">Curso Online en Vivo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Galería</a>
+                            <ul>
+                                <li><a routerLink="anillos">Anillos</a></li>
+                                <li><a routerLink="aretes">Aretes</a></li>
+                                <li><a routerLink="dijes">Dijes</a></li>
+                                <li><a routerLink="pulseras">Pulseras</a></li>
+                                <li><a routerLink="expo-caf">Expo CAF</a></li>
+                                <li><a routerLink="escuela-y-ursi-galletti">Escuela y Ursi Galletti</a></li>
+                                <li><a routerLink="joyas-de-la-gran-pantalla">Joyas de la Gran Pantalla</a></li>
+                                <li><a routerLink="publicaciones">Publicaciones</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Servicios</a>
+                            <ul>
+                                <li><a routerLink="servicios">Reparaciones</a></li>
+                                <li><a routerLink="herramientas">Herramientas</a></li>
+                            </ul>
+                        </li>
+                        <li><a routerLink="contact">Contacto</a></li>
+                        <li><a href="javascript:void(0)">Mi Cuenta</a>
+                            <ul>
+                                <div *ngIf="!user">
+                                    <li><a routerLink="login">Registro/Login</a></li>
+                                </div>
+                                <div *ngIf="user">
+                                    <li>Bienvenido: {{user.username}}</li>
+                                    <li><a [routerLink]="['/user-account', user.id]">Mi Cuenta</a></li>
+                                    <li><a (click)="logout()" class="cursor">Logout</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <aside class="right">
+                    <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
+                        <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>

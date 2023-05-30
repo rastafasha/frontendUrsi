@@ -1,0 +1,74 @@
+<footer class="footer-style-1">
+    <div class="container">
+        <div class="row">
+            <div class="footer-style-1-inner footer-flex">
+                <div class=" col-sm-3">
+                    <a routerLink="/">
+                        <img class="logo-footer" src="./assets/images/logo.png" alt="Logo Ursi galletti" />
+                    </a>
+                </div>
+
+                <div class=" widget-text">
+                    <div class="widget-link">
+                        <ul>
+                            <li>
+                                <span class="lnr lnr-map-marker icon"></span>
+                                <span>7500 Bellaire Blvd, Houston, Texas 77036, <br>United States</span>
+                            </li>
+                            <li>
+                                <span class="lnr lnr-phone-handset icon"></span>
+                                <a href="tel:+18328976091">+1-832-897.60.91</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-whatsapp icon"></span>
+                                <a href="https://wa.me/18328976091" title="Facebook" target="_blank">+1-832-897.60.91</a>
+                            </li>
+                            <li>
+                                <span class="lnr lnr-envelope icon"></span>
+                                <a href="mailto: ugalletti@hotmail.com">ugalletti@hotmail.com </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" widget-newsletter-footer">
+                    <h4 class="h4 heading">NEWSLETTER</h4>
+                    <p>Subscribete y mantente actualizado</p>
+                    <form [formGroup]="registerForm" (ngSubmit)="crearUsuario()" class="organic-form form-inline btn-add-on circle border">
+                        <input type="hidden" formControlName="id">
+                        <div class="form-group ">
+                            <input class="form-control pill transparent" formControlName="email" placeholder="Tu Email..." type="email" />
+                            <button class="btn btn-brand circle" type="submit" (click)="crearUsuario()">
+                              <i class="fa fa-envelope-o"></i>
+                          </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-right style-1">
+        <div class="container">
+            <div class="row">
+                <div class="copy-right-inner">
+                    <p style="font-size:12px !important">Copyright © {{year}} Galletti Ursi Orfebre | Desarrollado por : <a href="http://www.malcolmcordova.com" target="_blank">malcolmcordova.com</a></p>
+                    <div class="widget widget-footer widget-footer-creadit-card">
+                        <ul class="list-unstyle">
+                            <li><a href="https://facebook.com/163997566976018" target="_blank"><i
+                                      class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://instagram.com/ursigalletti" target="_blank"><i
+                                      class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://pinterest.com/ursigalletti" target="_blank"><i
+                                      class="fa fa-pinterest"></i></a></li>
+                            <li><a href="https://twitter.com/ugalletti" target="_blank"><i
+                                      class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://youtube.com/ugalletti" target="_blank"><i
+                                      class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

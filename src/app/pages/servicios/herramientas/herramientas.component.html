@@ -1,0 +1,27 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/herramienta2.png" alt="ursi galletti taller escuela orfebreria">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Herramientas</h3>
+</section>
+<!---cursos--->
+
+
+<section class="boxed-sm" id="info">
+    <div class="container" *ngFor="let herramienta of herramientas">
+        <div class="row padding">
+            <div class="herramientas animated fadeInUp">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>{{herramienta.title}}</h3>
+                    <h2>{{herramienta.subtitle}}</h2>
+                    <br>
+                    <div class="sapo" [innerHtml]="herramienta.description | safe: 'html' "></div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img [src]="herramienta.image | imagenPipe: 'herramientas'" alt="ursi galletti taller escuela orfebreria {{herramienta.title}}">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>

@@ -1,0 +1,30 @@
+<div class="widget widget-categories">
+    <h4 class="title-widget text-center">Ultimos Post</h4>
+    <!-- post -->
+    <div *ngFor="let blog of postrecientes">
+        <div class="post row post-lateral">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <a [routerLink]="['/blog', blog.slug]">
+                    <div *ngIf="!blog.image">
+                        <img class="img-responsive" src="./assets/images/no-image.jpg" alt="ursi galletti taller escuela orfebreria {{blog.title}}" style="width:100%" />
+                    </div>
+                    <div *ngIf="blog.image">
+                        <img class="img-responsive" [src]="blog.image | imagenPipe: 'posts'" alt="ursi galletti taller escuela orfebreria {{blog.title}}" style="width:100%" />
+                    </div>
+                </a>
+            </div>
+            <div class=" col-xs-12 col-sm-8 col-md-8">
+                <h5>
+                    <a [routerLink]="['/blog', blog.slug]">{{blog.title}}</a>
+                </h5>
+                <p class="meta">
+                    <span class="time">{{blog.created_at | date:'mediumDate'}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- post -->
+    <br>
+
+
+</div>

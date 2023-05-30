@@ -1,0 +1,37 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/slider/cultural.jpg" alt="ursi galletti taller escuela orfebreria cursos">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Cronograma de Cursos</h3>
+</section>
+
+
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding">
+            <div class="curso-cronograma " *ngFor="let cronologiacurso of cronologiacursos">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>{{cronologiacurso.modo}}</h3>
+                    <h2>{{cronologiacurso.title}}</h2>
+                    <div class="sapo" [innerHtml]="cronologiacurso.description | safe: 'html' "></div>
+                    <br>
+                    <ul style="padding-left:20px">
+                        <li>Fecha: {{cronologiacurso.fecha}}</li>
+                        <li>Hora: {{cronologiacurso.hora}}</li>
+                        <li>Clases: {{cronologiacurso.clases}}</li>
+                        <li>Duración: {{cronologiacurso.duracion}}</li>
+                        <li>{{cronologiacurso.proyecto}}</li>
+                        <li>costo: ${{cronologiacurso.costo}}</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div *ngIf="!cronologiacurso.image">
+                        <img class="img-responsive" src="./assets/images/no-image.jpg" alt="ursi galletti taller escuela orfebreria {{cronologiacurso.title}}" />
+                    </div>
+                    <div *ngIf="cronologiacurso.image">
+                        <img class="img-responsive" [src]="cronologiacurso.image | imagenPipe: 'cronologiacursos'" alt="ursi galletti taller escuela orfebreria {{cronologiacurso.title}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/slider/1.jpg" alt="ursi galletti taller escuela orfebreria cursos">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Todos nuestros Cursos</h3>
+</section>
+
+
+<section class="boxed-sm padding" id="cursos">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9">
+                <!-- <div class="container" infiniteScroll [infiniteScrollDistance]="2" (scrolled)="onScroll()"> -->
+                <div *ngFor="let product of cursos |  paginate: { itemsPerPage: count, currentPage: p }">
+                    <div class="col-xs-6 col-sm-4">
+                        <app-product-item [product]="product"></app-product-item>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div class="clear"></div>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div *ngIf="!user">
+                    <h4>Inicia Sesión o <br> Registrate para comprar</h4>
+                    <a (click)="gotoLogin()" class="cursor btn btn-outline-ursi">ir al login</a>
+                </div>
+                <div *ngIf="user">
+                    <app-cart></app-cart>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<app-modal-producto></app-modal-producto>

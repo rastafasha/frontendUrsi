@@ -1,0 +1,19 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/servicios.jpg" alt="ursi galletti taller escuela orfebreria">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Servicios</h3>
+</section>
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding" *ngFor="let servicio of services; let i = index">
+            <div class="col-xs-12 col-sm-6">
+                <iframe width="100%" height="320" style="margin-top:40px;" class="wow fadeIn embed-responsive-item" [src]="getVideoIframe(servicio.videoUrl)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; " allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h4>{{servicio.title}}</h4>
+                <h3>{{servicio.subtitle}}</h3>
+                <div class="sapo" [innerHtml]="servicio.description | safe: 'html' "></div>
+            </div>
+        </div>
+    </div>
+</section>

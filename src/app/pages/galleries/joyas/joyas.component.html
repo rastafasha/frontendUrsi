@@ -1,0 +1,16 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/expojoyasgranpantalla22.jpg" alt="ursi galletti taller escuela orfebreria Joyas de la Gran Pantalla">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Joyas de la Gran Pantalla</h3>
+</section>
+
+<section class="boxed-sm" id="info">
+    <div class="container ">
+        <div class="masonry">
+            <div class="item" *ngFor="let joya of joyas">
+                <a [href]="joya.image | imagenPipe: 'joyas'" data-gallery title="">
+                    <img [src]="joya.image | imagenPipe: 'joyas'" alt="ursi galletti taller escuela orfebreria Joyas de la Gran Pantalla" width="133" height="100" border="0" class="pin" /></a>
+            </div>
+        </div>
+    </div>
+</section>

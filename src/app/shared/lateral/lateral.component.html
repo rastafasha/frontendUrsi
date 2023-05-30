@@ -1,0 +1,8 @@
+<div class="widget widget-categories">
+    <h4 class="title-widget text-center">Categorías</h4>
+    <ul>
+        <li *ngFor="let cat of categories">
+            <a [routerLink]="['/blog/category/', cat.name]">{{cat.name}}</a>
+        </li>
+    </ul>
+</div>

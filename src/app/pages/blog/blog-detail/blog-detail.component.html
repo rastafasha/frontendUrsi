@@ -1,0 +1,60 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" [src]="post.image | imagenPipe: 'posts'" alt="ursi galletti taller escuela orfebreria ">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">{{post.title}}</h3>
+</section>
+<section class="boxed-sm" id="info">
+    <div class="container">
+        <div class="row padding">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <!-- post -->
+                <div class="post row">
+                    <div class="col-xs-12">
+                        <div *ngIf="!post.image">
+                            <img class="img-responsive" src="./assets/images/no-image.jpg" alt="ursi galletti taller escuela orfebreria {{post.title}}" style="width:100%" />
+                        </div>
+                        <div *ngIf="post.image">
+                            <img class="img-responsive" [src]="post.image | imagenPipe: 'posts'" alt="ursi galletti taller escuela orfebreria {{post.title}}" style="width:100%" />
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <br>
+                    <div class=" col-xs-12">
+                        <h3>{{post.title}}</h3>
+                        <p class="meta">
+                            <span class="time">
+                            <a [routerLink]="['/blog/category/', post.name]">{{post.name}}</a>
+                            </span>
+                        </p>
+                        <p class="meta">
+                            <span class="time">{{post.created_at | date:'mediumDate'}}</span>
+                        </p>
+                        <br>
+
+                        <div class="sapo" [innerHtml]="post.description | safe: 'html' "></div>
+                        <div class="sharing">
+
+                            <h4>Compartir</h4>
+                            <share-buttons theme="circles-dark" [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']" [showIcon]="true" [showText]="false"
+                                url="https://ursigalletti.net/blog/{{post.slug}}" description="{{post.description}}" twitterAccount="@ursigalletti" class="pt-1">
+                            </share-buttons>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- post -->
+                <h4 class="text-center">Publicaciones Recientes</h4>
+                <app-blog-featured></app-blog-featured>
+            </div>
+            <!-- lateral -->
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <!-- <app-lateral></app-lateral> -->
+                <br>
+                <!-- <app-blog-list></app-blog-list> -->
+            </div>
+            <!-- lateral -->
+
+
+        </div>
+    </div>
+</section>

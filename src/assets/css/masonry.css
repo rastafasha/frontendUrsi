@@ -1,0 +1,112 @@
+.masonry {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+    margin: 1.5em;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+
+.masonry .item {
+    display: inline-block;
+    background: #fff;
+    width: 100%;
+    -webkit-transition: 1s ease all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px 0 #ccc;
+}
+
+.masonry .item .thumbnail {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.masonry .item img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+
+/* Just to print out numbers */
+
+div.masonry.item::before {
+    counter-increment: items;
+    /* content: counter(items); */
+}
+
+
+/* Re-order items into 3 rows */
+
+.masonry .item:nth-of-type(4n+1) {
+    order: 1;
+}
+
+.masonry .item:nth-of-type(4n+2) {
+    order: 2;
+}
+
+.masonry .item:nth-of-type(4n+3) {
+    order: 3;
+}
+
+.masonry .item:nth-of-type(4n) {
+    order: 4;
+}
+
+
+/* Force new columns */
+
+.break {
+    flex-basis: 100%;
+    width: 0;
+    border: 1px solid #ddd;
+    margin: 0;
+    content: "";
+    padding: 0;
+}
+
+@media(max-width:768px) {
+    .masonry {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 1em;
+        -moz-column-gap: 1em;
+        column-gap: 1em;
+        margin: 1.5em;
+        padding: 0;
+        -moz-column-gap: 1.5em;
+        -webkit-column-gap: 1.5em;
+        column-gap: 1.5em;
+        font-size: .85em;
+    }
+}
+
+@media(max-width:420px) {
+    .masonry {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 1em;
+        -moz-column-gap: 1em;
+        column-gap: 1em;
+        margin: 1.5em;
+        padding: 0;
+        -moz-column-gap: 1.5em;
+        -webkit-column-gap: 1.5em;
+        column-gap: 1.5em;
+        font-size: .85em;
+    }
+}

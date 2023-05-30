@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Author: Malcolm Córdova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+@import url("bootstrap.css");
+@import url("prettyPhoto.css");
+@import url("normalize.css");
+@import url("animate.css");
+@import url("bootstrap-gallery.css");
+@import url("ekko-lightbox.css");
+@import url("generales.css");
+@import url("Ursistyles.css");
+@import url("mouseicon.css");
+@import url("header.css");
+@import url("gallery.css");
+@import url("Galeria.css");
+@import url("masonry.css");
+@import url("login-registro.css");
+@import url("item-product.css");
+@import url("profile.css");
+:root {
+    --vinotinto: #961f36;
+    --white: #f2f2f2;
+    --font-title: 'Montserrat', sans-serif
+}
+
+.menu ul li a {
+    color: #666666;
+    padding: 8px 5px;
+    display: block;
+    min-width: 200px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    color: var(--vinotinto) !important;
+}
+
+.sharing {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sharing h4 {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.sharing ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.sharing ul li a {
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+    color: var(--vinotinto);
+    font-size: 16px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.blueimp-gallery .modal-content {
+    position: relative;
+    background-color: transparent !important;
+    border: none !important;
+    border: none !important;
+    border-radius: 10px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: 0;
+}
+
+.blueimp-gallery .modal-content img {
+    width: 100%;
+}

@@ -1,0 +1,85 @@
+<section class="sub-header shop-layout-1">
+    <img class="rellax bg-overlay" src="./assets/images/sub-header/final.jpg" alt="ursi galletti taller escuela orfebreria">
+    <div class="overlay-call-to-action"></div>
+    <h3 class="heading-style-3">Contáctenos</h3>
+</section>
+
+<!-- =======| Main |======= -->
+<section class="section dashboard">
+
+
+
+    <section class="cmspage mt-4 contact">
+        <div class="container card">
+            <div class="page-desc row">
+                <div class="col-12 col-sm-6 col-md-8">
+                    <form (ngSubmit)="enviarEmail()" [formGroup]="contactForm">
+                        <div class="form-group row col-12 col-sm-6">
+                            <label>Nombres <span class="required">*</span></label>
+                            <input type="text" name="name" id="name" formControlName="name" class="form-control" placeholder=" Nombre y Apellido" required>
+
+                        </div>
+                        <div class=" form-group row col-12 col-sm-6">
+                            <label>Teléfono <span class="required">*</span></label>
+                            <input type="text" name="phone" id="phone" formControlName="phone" class="form-control" placeholder=" Telefono">
+                        </div>
+                        <div class=" form-group col-12">
+                            <label>Email <span class="required">*</span></label>
+                            <input type="text" name="email" id="email" formControlName="email" class="form-control" placeholder="E-Mail" required>
+
+                        </div>
+                        <div class=" form-group col-12 ">
+                            <label>Tema <span class="required">*</span></label>
+                            <input type="text" name="subject" id="subject" formControlName="subject" class="form-control" placeholder=" Tema">
+                        </div>
+                        <div class=" form-group col-12">
+                            <label>Mensaje <span class="required">*</span></label>
+                            <textarea name="comment" id="comment" formControlName="comment" rows="5" class="form-control" placeholder="Comentario" required></textarea>
+
+                        </div>
+                        <div class="clear"></div><br>
+                        <div class="form-group col-12">
+                            <button [disabled]="!contactForm.valid" class="btn btn-outline-ursi col-xs-12 col-md-4 col-md-offset-4"> Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="Social col-12 col-md-4">
+                    <div id="direcc">
+                        <div class="info">
+                            <b class="font" style="font-size:18px;">Dirección:</b><br>
+                            <p>7500 Bellaire Blvd, Houston, Texas 77036, <br>United States</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="info">
+                            <b class="font" style="font-size:18px;">Teléfonos:</b>
+                            <a href="tel:+1-832-897.60.91" target="_blank"><i class="fa fa-phone"></i>&nbsp;+1-832-897.60.91 </a>
+                            <a href="https://wa.me/18328976091" target="_blank"><i class="fa fa-whatsapp"></i>&nbsp;+1-832-897.60.91 </a>
+                            <b class="font" style="font-size:18px;">Redes Sociales:</b>
+                            <a href="https://www.facebook.com/ugalletti" target="_blank"><i class="fa fa-facebook"></i>&nbsp;ugalletti</a>
+                            <a href="http://www.instagram.com/ugalletti" target="_blank"><i class="fa fa-instagram"></i>&nbsp;ugalletti</a>
+                            <a href="https://pinterest.com/ursigalletti" target="_blank"><i class="fa fa-pinterest"></i>&nbsp;ugalletti</a>
+                            <a href="https://twitter.com/ugalletti" target="_blank"><i class="fa fa-twitter"></i>&nbsp;ugalletti</a>
+                            <a href="https://youtube.com/ugalletti" target="_blank"><i class="fa fa-youtube-play"></i>&nbsp;ugalletti</a>
+
+                        </div>
+                        <div class="clear"></div>
+                        <div class="info">
+                            <b class="font" style="font-size:18px;">Email:</b>
+                            <a href="mailto:ugalletti@hotmail.com" target="_blank">ugalletti@hotmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clear"></div><br><br>
+    <div class="container mapa">
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3465.45940319483!2d-95.51642242520563!3d29.70644913450712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8640c2598bd0f8e9%3A0x52604aa898531afc!2s7500%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077036%2C%20EE.%20UU.!3m2!1d29.7064445!2d-95.5138475!5e0!3m2!1ses!2sve!4v1682982214028!5m2!1ses!2sve"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+    </div>
+</section>
+<!-- End #main-->
