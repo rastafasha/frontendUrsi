@@ -15857,7 +15857,7 @@ body {
 }
 
 .modal {
-    display: block;
+    /* display: block; */
     /* visibility: hidden; */
     overflow-y: hidden;
 }
@@ -17952,7 +17952,7 @@ body.modal-open .mm-slideout {
 
 .btn {
     font-size: 14px;
-    padding: 0 37px;
+    padding: 0 25px;
     transition: all 0.3s ease-in-out;
     line-height: 46px;
 }

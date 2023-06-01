@@ -30,6 +30,7 @@ import { PulserasComponent } from './pages/galleries/pulseras/pulseras.component
 import { CursoComponent } from './pages/cursos/curso/curso.component';
 import { PasswordresetComponent } from './auth/passwordreset/passwordreset.component';
 import { NewpasswordComponent } from './auth/newpassword/newpassword.component';
+import { RegistroComponent } from './auth/registro/registro.component';
 
 const routes: Routes = [
 
@@ -66,6 +67,7 @@ const routes: Routes = [
   { path: 'blog/category/:name', component: PostByCategoryComponent },
   //user
   { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegistroComponent },
   { path: 'user-account', component: PerfilComponent },
   { path: 'user-account/:id', component: PerfilComponent },
   { path: 'user-account/payment-detail/:id', component: PaymentDetailsComponent },

@@ -7,13 +7,12 @@ import { AccountService } from 'src/app/services/account.service';
 import { UserService } from 'src/app/services/user.service';
 declare const gapi: any;
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: [ './login.component.css' ]
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegistroComponent implements OnInit {
   email = new FormControl();
   password = new FormControl();
   remember = new FormControl();
@@ -57,35 +56,7 @@ export class LoginComponent implements OnInit {
   username: FormControl<any>;
 ngOnInit(){
   window.scrollTo(0, 0);
-  this.loginForm = this.fb.group({
-    email: [ localStorage.getItem('email') || '', [Validators.required, Validators.email] ],
-    password: ['', Validators.required],
-    remember: [false]
 
-  });
-
-}
-login(){
-
-  this.accountService.login(this.loginForm.value).subscribe(
-    resp =>{
-      if(this.loginForm.get('remember').value){
-        localStorage.setItem('email', this.loginForm.get('email').value);
-      }else{
-        localStorage.removeItem('email');
-      }
-      this.refresh();
-      this.router.navigateByUrl('/home');
-
-    },(error) => {
-      Swal.fire('Error', error.error.msg, 'error');
-      this.errors = error.error;
-    }
-    )
-    // console.log(this.user)
-}
-refresh(): void {
-  window.location.reload();
 }
 
 
@@ -115,8 +86,6 @@ campoNoValido(campo: string): boolean {
   }else{
     return false;
   }
-
-
 }
 
 aceptaTerminos(){
@@ -148,8 +117,8 @@ passwordsIguales(pass1Name: string, pass2Name: string){
 }
 // Registro
 
-irAlregistro(){
-  this.router.navigateByUrl('/registro');
+irAlLogin(){
+  this.router.navigateByUrl('/login');
 }
 
 }

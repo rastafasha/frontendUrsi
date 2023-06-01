@@ -7,17 +7,20 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { PasswordresetComponent } from './passwordreset/passwordreset.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     PasswordresetComponent,
     NewpasswordComponent,
+    RegistroComponent,
   ],
   exports: [
     LoginComponent,
     PasswordresetComponent,
-    NewpasswordComponent
+    NewpasswordComponent,
+    RegistroComponent,
   ],
   imports: [
     CommonModule,
